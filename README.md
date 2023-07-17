@@ -43,7 +43,7 @@ juju bootstrap --bootstrap-series=jammy --constraints tags=juju mymaas mymaas-co
 ```
 * buat model baru pada Juju
 ```
-juju add-model --config default-series=bionic laboratory
+juju add-model laboratory
 ```
 * masuk ke dashboard JaaS
 ```
@@ -51,7 +51,7 @@ juju dashboard
 ```
 * menambahkan machine ke juju models dengan tags `machine`
 ```
-juju add-machine --constraints tags=machine
+juju add-machine --constraints "tags=machine" --series jammy
 ```
 * deploying apps ke machine yang terdaftar di juju
 ```
