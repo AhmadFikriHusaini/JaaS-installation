@@ -55,8 +55,8 @@ juju add-machine --constraints "tags=machine" --series jammy
 ```
 * deploying apps ke machine yang terdaftar di juju
 ```
-juju deploy --to 0 wordpress
-juju deploy --to 0 mysql --channel=edge
+juju deploy --to 0 --series bionic wordpress
+juju deploy --to 0 --series bionic mysql --channel latest/edge
 juju add-relation mysql wordpress
 juju expose wordpress
 ```
